@@ -1,0 +1,9 @@
+<div>
+	<h2>Agregar Estatus</h2>
+	<% form_for(:estatu, :url => {:action => "crear", :id => @estatu.id} ) do |e| %>
+	<%= render(:partial => "form", :locals => {:e => e}) %>
+	<div>
+		<%= submit_tag("Agregar") %>
+	</div>
+	<%end%>
+</div>

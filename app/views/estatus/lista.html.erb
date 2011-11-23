@@ -1,0 +1,25 @@
+<h2>Estatus</h2>
+<table class="lista">
+	<tr class="header">
+		<td>&nbsp;</td>
+		<td>Estado</td>
+		<td>Descripción</td>
+		<td>Lugar</td>
+		<td>&nbsp;</td>
+	</tr>
+	<% @estatus.each do |e| %>
+	<tr class="<%= cycle("uno", "dos") %>">
+		<td><%= e.id %></td>
+		<td><%= e.estado %></td>
+		<td><%= e.descripcion %></td>
+		<td><%= e.lugar %></td>
+		<td class="acciones">
+			<%= link_to("Editar", {:action => 'editar', :id => e.id }, :class =>'boton_link') %>
+			<%= link_to("Borrar", {:action => 'borrar', :id => e.id }, :class =>'boton_link') %>
+		</td>
+	</tr>
+	<% end %>
+</table>
+<div>
+	<%= link_to("Agregar Estatus", {:action => 'nuevo'}, :class =>'boton_link') %>
+</div>

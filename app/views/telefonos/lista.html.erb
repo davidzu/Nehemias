@@ -1,0 +1,15 @@
+﻿<h2>Teléfonos</h2>
+<table class="listing">
+	<tr class="header">
+		<th>numero</th>
+		<th>Id cliente</th>
+		<th>Descripción</th>
+	</tr>
+	<%= @telefonos.each do |t| %>
+	<tr>
+		<td><%= t.numero %></td>
+		<td><%= t.cliente_id %></td>
+		<td><%= t.descripcion %></td>
+	</tr>
+	<%end%>
+</table>

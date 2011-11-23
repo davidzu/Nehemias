@@ -1,0 +1,18 @@
+<%= render(:partial => 'shared/mensajes_error', :locals => {:object => @ordende_servicio}) %>
+<table summary="Orden de Servicios">
+	<tr>
+		<th>Cliente id</th>
+		<td><%= os.text_field(:cliente_id) %></td>
+	</tr>
+	<tr>
+		<th>Tipo de Visa</th>
+		<td><%= s.text_field(:Ordena) %></td>
+	</tr>
+	<tr>
+		<td>
+		 <%= ordende_servicio_form.fields_for :tramites do |t| %>
+		    <%= render(:partial => "tramite/form", :locals => {:t => t}) %>
+		  <% end %>
+		</td>
+	</tr>
+</table>

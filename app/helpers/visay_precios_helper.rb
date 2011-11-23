@@ -1,0 +1,2 @@
+module VisayPreciosHelper
+end

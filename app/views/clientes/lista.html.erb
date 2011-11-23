@@ -1,0 +1,25 @@
+<h2>Clientes</h2>
+<table class="lista">
+	<tr class="header">
+		<td>&nbsp;</td>
+		<td>Nombre del Cliente</td>
+		<td>Correo Electrónico</td>
+		<td>Dirección</td>
+		<td>&nbsp;</td>
+	</tr>
+	<% @clientes.each do |c| %>
+	<tr class="<%= cycle("uno", "dos") %>">
+		<td><%= c.id %></td>
+		<td><%= c.nombre %></td>
+		<td><%= c.correo_electronico %></td>
+		<td><%= c.direccion %></td>
+		<td class="acciones">
+			<%= link_to("Editar", {:action => 'editar', :id => c.id }, :class =>'boton_link') %>
+			<%= link_to("Borrar", {:action => 'borrar', :id => c.id }, :class =>'boton_link') %>
+		</td>
+	</tr>
+	<% end %>
+</table>
+<div>
+	<%= link_to("Agregar Cliente", {:action => 'nuevo'}, :class =>'boton_link') %>
+</div>

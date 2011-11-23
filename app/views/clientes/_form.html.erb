@@ -1,0 +1,15 @@
+<%= render( :partial => "shared/mensajes_error", :locals => {:object => @cliente} ) %>
+<table summary="Cliente">
+	<tr>
+		<th>Nombre</th>
+		<td><%= c.text_field(:nombre) %></td>
+	</tr>
+	<tr>
+		<th>Correo Electrónico</th>
+		<td><%= c.text_field(:correo_electronico) %></td>
+	</tr>
+	<tr>
+		<th>Dirección</th>
+		<td><%= c.text_area(:direccion, :size => "30x3") %></td>
+	</tr>
+</table>

@@ -1,0 +1,15 @@
+<%= render( :partial => "shared/mensajes_error", :locals => {:object => @estatu} ) %>
+<table summary="Estatus">
+	<tr>
+		<th>Estado</th>
+		<td><%= e.text_field(:estado) %></td>
+	</tr>
+	<tr>
+		<th>Descripción</th>
+		<td><%= e.text_field(:descripcion) %></td>
+	</tr>
+	<tr>
+		<th>Lugar</th>
+		<td><%= e.text_field(:lugar) %></td>
+	</tr>
+</table>

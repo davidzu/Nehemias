@@ -1,0 +1,25 @@
+<h2>Observaciones</h2>
+<table class="lista">
+	<tr class="header">
+		<td>&nbsp;</td>
+		<td>Comentario</td>
+		<td>Estatus</td>
+		<td>Fecha Compromiso</td>
+		<td>&nbsp;</td>
+	</tr>
+	<% @observacions.each do |o| %>
+	<tr class="<%= cycle("uno", "dos") %>">
+		<td><%= o.id %></td>
+		<td><%= o.comentario %></td>
+		<td><%= o.estatus %></td>
+		<td><%= o.fecha_compromiso %></td>
+		<td class="acciones">
+			<%= link_to("Editar", {:action => 'editar', :id => o.id }, :class =>'boton_link') %>
+			<%= link_to("Borrar", {:action => 'borrar', :id => o.id }, :class =>'boton_link') %>
+		</td>
+	</tr>
+	<% end %>
+</table>
+<div>
+	<%= link_to("Agregar Observación", {:action => 'nuevo'}, :class =>'boton_link') %>
+</div>

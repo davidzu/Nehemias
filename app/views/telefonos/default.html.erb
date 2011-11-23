@@ -1,0 +1,19 @@
+<div>
+	<h2>Teléfonos</h2>
+	<table>
+		<% @Atelefonos.each do |t| %>
+		<tr class="<%= cycle("uno", "dos") %>">
+			<td><%= t.descripcion  %></td>
+			<td><%= t.numero %></td>
+			<td><%= link_to("Borrar", {:action => "borrar", :id => t.id}, :class =>"boton_link") %></td>
+		</tr>
+		<% end %>
+	</table>
+</div>
+	<hr>
+<div>
+	<% form_for(:telefono, :url => {:action => "crear", :id => @telefono.id}) do |f| %>
+			<%= render(:partial => "form", :locals => {:f => f}) %>
+	<%= submit_tag("Agregar Telefono") %>
+	<% end %>
+</div>

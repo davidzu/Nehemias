@@ -1,0 +1,38 @@
+<%= render(:partial => 'shared/mensajes_error', :locals => {:object => @tramite}) %>
+<table summary="tramites">
+	<tr>
+		<th>Nombre del Pasajero</th>
+		<td><%= t.text_field(:nombre_pasajero) %></td>
+	</tr>
+	<tr>
+		<th>Número de Pasaporte</th>
+		<td><%= t.text_field(:numero_pasaporte) %></td>
+	</tr>
+	<tr>
+		<th>Fecha del viaje</th>
+		<td><%= t.datetime_select(:fecha_viaje) %></td>
+	</tr>
+	<tr>
+		<th>Fecha de compromiso de entrega</th>
+		<td><%= t.datetime_select(:fecha_entrega) %></td>
+	</tr>
+	<tr>
+		<th>Es el pasajero extranjero</th>
+		<td><%= t.check_box(:extranjero)%></td>
+	</tr>
+	<tr>
+		<th>País</th>
+		<td>
+			<%= collection_select("pais", "id", @servicios, "id", "pais") %>
+		</td>
+	<tr>
+	<tr>
+		<th>Tipo de visa</th>
+		<td>
+			<%= collection_select("tipo_visa", "id", @servicios, "id", "tipo_visa") %>
+		</td>
+	<tr>
+		<th>Fecha de compromiso consular</th>
+		<td><%= t.date_select(:fecha_consular)%></td>
+	</tr>
+</table>

@@ -1,0 +1,5 @@
+<div>
+	<%= options_from_collection_for_select(@servicios, 'id', 'pais') %>
+	form_for
+	f.select(:servicios_label,  @servicios.all.collect {|s| [s.pais, s.id] })
+</div>

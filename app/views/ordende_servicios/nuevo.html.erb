@@ -1,0 +1,16 @@
+<div>
+	<h2>Agregar Ordenes de Servicio</h2>
+	<div>
+		<%= render(:partial => "clientes/lista") %>
+	</div>
+	<% form_for(:ordende_servicio, :url => {:action => "crear", :id => @ordende_servicio.id} ) do |ordenes| %>
+	<div>
+		<%render(:partial =>"form") %>
+	</div>
+	<div>
+	</div>
+	<div>
+		<%= submit_tag("Agregar") %>
+	</div>
+	<%end%>
+</div>

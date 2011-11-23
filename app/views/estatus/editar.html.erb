@@ -1,0 +1,9 @@
+<div>
+	<h2>Editar Estatus</h2>
+	<% form_for(:estatu, :url => {:action => "actualizar", :id => @estatu.id} ) do |e| %>
+	<%= render(:partial => "form", :locals => {:e => e}) %>
+	<div>
+		<%= submit_tag("Guardar") %>
+	</div>
+	<%end%>
+</div>

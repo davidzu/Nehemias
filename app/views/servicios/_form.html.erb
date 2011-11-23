@@ -1,0 +1,31 @@
+<%= render(:partial => 'shared/mensajes_error', :locals => {:object => @servicio}) %>
+<table summary="servicios">
+	<tr>
+		<th>País</th>
+		<td><%= s.text_field(:pais) %></td>
+	</tr>
+	<tr>
+		<th>Tipo de Visa</th>
+		<td><%= s.text_field(:tipo_visa) %></td>
+	</tr>
+	<tr>
+		<th>Días habiles cliente</th>
+		<td><%= s.text_field(:dias_habiles_cliente, :size => 2) %></td>
+	</tr>
+	<tr>
+		<th>Días habiles consulado</th>
+		<td><%= s.text_field(:dias_habiles_consulado, :size => 2) %></td>
+	</tr>
+	<tr>
+		<th>Costo consular en dólares</th>
+		<td><%= s.text_field(:costo_consular_dolares, :size => 6)%></td>
+	</tr>
+	<tr>
+		<th>Costo consular en pesos</th>
+		<td><%= s.text_field(:costo_consular_pesos, :size => 6)%></td>
+	</tr>
+	<tr>
+		<th>Costo administrativo</th>
+		<td><%= s.text_field(:costo_administrativo, :size => 6)%></td>
+	</tr>
+</table>

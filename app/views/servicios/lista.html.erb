@@ -1,0 +1,32 @@
+<h2>Servicios</h2>
+<table class="lista">
+	<tr class="header">
+		<td>Id</td>
+		<td>País</td>
+		<td>Tipo de visa</td>
+		<td>Días clientes</td>
+		<td>Días consulado</td>
+		<td>Costo dólares</td>
+		<td>Costo pesos</td>
+		<td>Costo administrativo</td>
+	</tr>
+	<% @servicios.each do |t| %>
+	<tr class="<%= cycle("uno", "dos") %>">
+		<td><%= t.id %></td>
+		<td><%= t.pais %></td>
+		<td><%= t.tipo_visa %></td>
+		<td><%= t.dias_habiles_cliente %></td>
+		<td><%= t.dias_habiles_consulado%></td>
+		<td><%= t.costo_consular_dolares%></td>
+		<td><%= t.costo_consular_pesos %></td>
+		<td><%= t.costo_administrativo %></td>
+		<td class="acciones">
+			<%= link_to("Editar", {:action => 'editar', :id => t.id }, :class =>'boton_link') %>
+			<%= link_to("Borrar", {:action => 'borrar', :id => t.id }, :class =>'boton_link') %>
+		</td>
+	</tr>
+	<% end %>
+</table>
+<div>
+	<%= link_to("Agregar Servicios", {:action => 'nuevo'}, :class =>'boton_link') %>
+</div>

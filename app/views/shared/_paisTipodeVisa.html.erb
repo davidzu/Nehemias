@@ -1,0 +1,13 @@
+<table summary="paisTipodeVisa">
+	<tr>
+		<th>País</th>
+		<td>
+			<%= @visay_precio = visay_precio.find(:all, :order => "país")
+collection_select("pais", "id", @visay_precios, :id, :pais ) %>
+		</td>
+	</tr>
+	<tr>
+		<th>Tipo de Visa</th>
+		<td></td>
+	</tr>
+</table>

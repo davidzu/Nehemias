@@ -1,0 +1,15 @@
+<%= render( :partial => "shared/mensajes_error", :locals => {:object => @telefono} ) %>
+﻿<table summary="Agregar Teléfono">
+	<tr>
+		<th>Teléfono</th>
+	</tr>
+	<tr>
+		<td class="Label">Número</td>
+		<td><%= f.text_field(:numero) %></td>
+		<td>10 digitos</td>
+	</tr>
+	<tr>
+		<td class="Label">Descripción</td>
+		<td><%= f.text_field(:descripcion) %></td>
+	</tr>
+</table>

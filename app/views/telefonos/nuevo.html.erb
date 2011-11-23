@@ -1,0 +1,26 @@
+﻿<div class="telefonos">
+	<h2>Teléfonos</h2>
+	<table>
+		<%= @telefonos.each do |t| %>
+		<tr>
+			<td><%= t.descripcion %></td>
+			<td><%= t.numero %></td>
+		</tr>
+	</table>
+	<hl>
+	<%= form_for(:telefono, :url => {:action => "crear", :id => @telefono.id} ) do |f| %>
+		<table summary="Agregar Teléfono">
+			<tr>
+				<th>Teléfono</th>
+				<th>Descripción</th>
+			</tr>
+			<tr>
+				<td><%= f.text_field(:numero) %></td>
+				<td><%= f.text_field(:descripcion) %></td>
+			</tr>
+		</table>
+	<div class="form-buttons">
+		<%= submit_tag("Agregar Telefono") %>
+	</div>
+	<%end%>
+</div>

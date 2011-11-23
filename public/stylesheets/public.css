@@ -1,0 +1,116 @@
+/* Default stylesheet */
+
+/* Colors
+Big Blue, texto #181c2b
+Grey-toolbar: #606b88
+Azul-background: #
+4096ee
+
+*/
+
+/*Generales */
+html { height: 100%; width: 100%; }
+body { width: 100%; height: 100%; margin: 0; padding: 0; 
+  font: 14px Verdana,Lucida,Arial,Helvetica,sans-serif; color: #181c2b; position: relative;}
+p, ul, ol, li, dl, dt, dd { 
+  font-family: Verdana,Lucida,Arial,Helvetica,sans-serif; }
+img { border: none; }
+table { border-collapse: collapse; }
+table tr th, table tr td { vertical-align: top; text-align: left; 
+  padding: 3px; }
+hr{}
+td{ font-size: 10px; font-family: Futura, Console, Lucida, sans-serif;}
+
+/* Classes    */
+.derecha{align="right"}
+table.Cliente{ }
+table.Ordendeservicio{}
+tr.header{
+font-size: 12px; border
+border-color: #ffffff #9e8e8e #9e8e8e #ffffff;
+background-color: #d1d1d1; border-style: solid;
+border-top-width: 2px; border-right-width: 2px;
+border-bottom-width: 2px; border-left-width: 2px;
+border-collapse:separate;
+font-weight: bold;
+}
+a, a:visited { color: #993120; }
+a:hover {}
+/*Nehemias */
+.field_telefono{
+
+}	
+.boton_link{
+font-size: 9px;
+}
+
+.app_header{ background: #4096ee;
+height: 75px;
+}
+/* end- Nehemias */
+.clear { clear: both; }
+.center { text-align: center; }
+.header_logo{vertical-align: middle;
+filter:alpha(opacity=30);
+-moz-opacity:0.2;
+-khtml-opacity: 0.2;
+opacity: 0.2;
+position: relative;
+float: right;
+}
+.header_text{vertical-align: middle;
+position: absolute;
+top: 5px;
+left: 5px;
+padding:5px;
+}
+.toolbar{ column-span:all;
+border-color: #a5aab7 #282d3a #282d3a #a5aab7;
+background-color: #606b88; border-style: solid;
+border-top-width: 2px; border-right-width: 2px;
+border-bottom-width: 2px; border-left-width: 2px;
+position: absolute;
+top:60px;
+left:0px;
+padding:0px;
+height: 15px;
+width: 100%;
+}
+.footer{
+background: #4096ee;
+height: 45px;
+position: absolute;
+bottom: 0px;
+width: 100%;
+font-size: x-small;
+font-family: Futura;
+text-align:center;
+color: #c2c2c2;
+}
+.flash_notice{
+border-color: #a5aab7 #282d3a #282d3a #a5aab7;
+background-color: #606b88; border-style: solid;
+border-top-width: 2px; border-right-width: 2px;
+border-bottom-width: 2px; border-left-width: 2px;
+height: 15px;
+width: 100%;
+color: red;
+font-size: normal; 
+}
+.uno{}
+.dos{	background-color: #ebebeb;}
+/* Structure */
+#navigation { float: left; width: 180px; min-height: 480px; padding: 10px; 
+  background: #94B26F; color: #4C2516; }
+#content { padding: 10px; }
+
+
+/* Navigation */
+#navigation ul { list-style: none; margin: 0; padding: 0; }
+#navigation ul li { margin-bottom: 0.5em; }
+#navigation ul ul { margin: 0.5em 0 0 1em; font-size: 0.9em; }
+#navigation a { text-decoration: none; padding: 1px 3px;}
+#navigation a:hover { background: #F2DC87; }
+
+/* Content */
+#content h2 { color: #4C2516; }

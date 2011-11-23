@@ -1,0 +1,15 @@
+<%= render( :partial => "shared/mensajes_error", :locals => {:object => @observacion} ) %>
+<table summary="Observacions">
+	<tr>
+		<th>Comentario</th>
+		<td><%= o.text_area(:comentario, :rows => 2, :cols => 60) %></td>
+	</tr>
+	<tr>
+		<th>Estatus</th>
+		<td><%= collection_select("descripcion", "id", @estatus, "id", "descripcion") %></td>
+	</tr>
+	<tr>
+		<th>Fecha Compromiso</th>
+		<td><%= o.date_select(:fecha_compromiso) %></td>
+	</tr>
+</table>

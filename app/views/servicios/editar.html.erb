@@ -1,0 +1,9 @@
+<div>
+	<h2>Editar Servicios</h2>
+	<% form_for(:servicio, :url => {:action => "actualizar", :id => @servicio.id} ) do |s| %>
+	<%= render(:partial => "form", :locals => {:s => s}) %>
+	<div>
+		<%= submit_tag("Guardar") %>
+	</div>
+	<%end%>
+</div>

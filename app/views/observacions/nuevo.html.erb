@@ -1,0 +1,9 @@
+<div>
+	<h2>Agregar Observación</h2>
+	<% form_for(:observacion, :url => {:action => "crear", :id => @observacion.id} ) do |o| %>
+	<%= render(:partial => "form", :locals => {:o => o}) %>
+	<div>
+		<%= submit_tag("Agregar") %>
+	</div>
+	<%end%>
+</div>

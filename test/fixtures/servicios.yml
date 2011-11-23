@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  pais: MyString
+  tipo_visa: MyString
+  dias_habiles_cliente: 1
+  dias_habiles_consulado: 1
+  costo_consular_dolares: 9.99
+  costo_consular_pesos: 9.99
+  costo_administrativo: 9.99
+
+two:
+  pais: MyString
+  tipo_visa: MyString
+  dias_habiles_cliente: 1
+  dias_habiles_consulado: 1
+  costo_consular_dolares: 9.99
+  costo_consular_pesos: 9.99
+  costo_administrativo: 9.99

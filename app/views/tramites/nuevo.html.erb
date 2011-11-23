@@ -1,0 +1,9 @@
+<div>
+	<h2>Agregar Tramite</h2>
+	<% form_for(:tramite, :url => {:action => "crear", :id => @tramite.id} ) do |t| %>
+	<%= render(:partial => "form", :locals => {:t => t}) %>
+	<div>
+		<%= submit_tag("Agregar") %>
+	</div>
+	<%end%>
+</div>
